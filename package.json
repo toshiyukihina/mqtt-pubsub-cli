@@ -1,0 +1,21 @@
+{
+  "name": "mqtt-pubsub-cli",
+  "version": "0.0.1",
+  "description": "MQTT PubSub Playground",
+  "repository": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "index.js",
+  "preferGlobal": true,
+  "keywords": [
+    "mqtt"
+  ],
+  "author": "toshiyuki.hina@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "mqtt-connection": "^2.1.1",
+    "yargs": "^3.8.0"
+  }
+}
