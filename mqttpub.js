@@ -4,8 +4,7 @@ var net = require('net'),
     mqtt = require('mqtt-connection'),
     _ = require('lodash');
 
-var opts = require('./options').common;
-_.merge(opts, {
+var opts = _.merge(require('./options').common, {
   'm': {
     alias: 'message',
     demand: false,
@@ -61,8 +60,9 @@ conn
 
     doPublish(conn, argv.topic, argv.message, argv.qos, argv.period);
   })
-  .on('puback', function() {
+  .on('puback', function(packet) {
     console.log('* puback');
+    console.dir(packet);
   })
   .on('error', function(err) {
     console.error(err);

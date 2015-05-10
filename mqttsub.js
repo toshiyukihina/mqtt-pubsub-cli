@@ -3,10 +3,9 @@
 var net = require('net'),
     mqtt = require('mqtt-connection');
 
-var opts = require('./options').common,
-    argv = require('yargs')
+var argv = require('yargs')
       .usage('node $0')
-      .options(opts)
+      .options(require('./options').common)
       .argv;
 
 var stream = net.createConnection(argv.port, argv.host),
