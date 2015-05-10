@@ -7,7 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": "index.js",
+  "bin": {
+    "mqttpub": "mqttpub.js",
+    "mqttsub": "mqttsub.js"
+  },
   "preferGlobal": true,
   "keywords": [
     "mqtt"
